@@ -41,9 +41,9 @@ public class Main {
 	
 	System.out.println("Enter a whitdraw value:");
 	double whitdraw = sc.nextDouble();
+	sc.close();	
 	bank.whitdraw(whitdraw);
 	System.out.println("Updated account data:");
 	System.out.printf("Account %d, Holder: %s, Balance: $ %.2f%n", bank.getNumber(), bank.getName(), bank.getMoney());
-	sc.close();	
 	}
 }
