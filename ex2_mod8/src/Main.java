@@ -18,14 +18,11 @@ public class Main {
 		
 		System.out.println("Tax: ");
 		funcionary.tax = sc.nextDouble();
-		
 		System.out.printf("Employee: %s, $ %.2f%n", funcionary.name, funcionary.netsalary());
 		System.out.println("Which percentage  to increase salary? ");
+		funcionary.percentage = sc.nextDouble();
 		
-		System.out.printf("Updated data: %s, $ %.2f%n", funcionary.name, funcionary.increasesalary());
+		System.out.printf("Updated data: %s, $ %.2f%n", funcionary.name, funcionary.resultado());
 		sc.close();
-		
-		
 	}
-
 }

@@ -10,8 +10,7 @@ public class funcionary {
 		return this.salaryliquid - this.tax;
 	}	
 	
-	public void increasesalary(double total) {
-		percentage = percentage / 100;
-		total = (this.salaryliquid * tax);
+	public double resultado() {
+		return this.salaryliquid * (percentage / 100) + netsalary();
 	}
 }
