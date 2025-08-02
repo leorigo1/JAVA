@@ -1,6 +1,6 @@
 package entities;
 
-public class Pessoas {
+public abstract class Pessoas {
 
 	protected String name;
 	protected Double rent;
@@ -27,5 +27,13 @@ public class Pessoas {
 
 	public void setRent(Double rent) {
 		this.rent = rent;
+	}
+
+	@Override
+	public String toString() {
+		return  name + ": $ " + rent + "\n";
 	};
+	
+	public abstract double tax ();
+	
 }

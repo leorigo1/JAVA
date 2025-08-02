@@ -53,7 +53,19 @@ public class Program {
 				Pessoas juridice = new Juridice(name,anualincome,quantity);
 				list.add(juridice);
 			}	
+			sc.nextLine();
 		}
 		sc.close();	
+		
+		System.out.println("TAXES PAID:");
+		
+		double total = 0.0;
+		for (Pessoas p : list) {
+			double tax = p.tax();
+			System.out.printf("%s: $ %.2f%n", p.getName(), tax);
+			total += tax;
+		}
+		System.out.println("");
+		System.out.printf("TOTAL TAXES: $ %.2f%n", total);
 	}
 }

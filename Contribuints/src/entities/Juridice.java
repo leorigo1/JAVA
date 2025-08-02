@@ -19,4 +19,19 @@ public class Juridice extends Pessoas{
 		this.quant = quant;
 	};
 	
+	public String toString() {
+		return  name + ": $ " + rent + "\n";
+	}
+
+	@Override
+	  public double tax() {
+        double imposto = 0;
+        if (quant < 10) {
+        imposto = getRent() * 0.16;
+        }
+        if (quant > 10) {
+            imposto += getRent() * 0.14;
+        }
+        return imposto;
+    }
 }
